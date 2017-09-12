@@ -6,7 +6,7 @@ import (
 	"github.com/swarmdotmarket/perigord/contract"
 	"github.com/swarmdotmarket/perigord/testing"
 
-	"github.com/swarmdotmarket/token/bindings"
+	"github.com/swarmdotmarket/token_example/bindings"
 )
 
 type foo_test struct{}

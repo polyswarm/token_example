@@ -3,7 +3,7 @@
 package main
 
 import (
-	_ "github.com/swarmdotmarket/token/migrations"
+	_ "github.com/swarmdotmarket/token_example/migrations"
 	"github.com/swarmdotmarket/perigord/stub"
 )
 

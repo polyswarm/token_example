@@ -3,8 +3,8 @@ package main
 import (
 	"testing"
 
-	_ "github.com/swarmdotmarket/token/tests"
-	_ "github.com/swarmdotmarket/token/migrations"
+	_ "github.com/swarmdotmarket/token_example/tests"
+	_ "github.com/swarmdotmarket/token_example/migrations"
 	. "gopkg.in/check.v1"
 )
 

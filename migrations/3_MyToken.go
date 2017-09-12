@@ -12,7 +12,7 @@ import (
 	"github.com/swarmdotmarket/perigord/contract"
 	"github.com/swarmdotmarket/perigord/migration"
 
-	"github.com/swarmdotmarket/token/bindings"
+	"github.com/swarmdotmarket/token_example/bindings"
 )
 
 type MyTokenDeployer struct{}

@@ -9,8 +9,8 @@ import (
 	"github.com/swarmdotmarket/perigord/contract"
 	"github.com/swarmdotmarket/perigord/migration"
 
-	"github.com/swarmdotmarket/token/bindings"
-	_ "github.com/swarmdotmarket/token/migrations"
+	"github.com/swarmdotmarket/token_example/bindings"
+	_ "github.com/swarmdotmarket/token_example/migrations"
 )
 
 func main() {
