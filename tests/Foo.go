@@ -3,10 +3,10 @@ package tests
 import (
 	. "gopkg.in/check.v1"
 
-	"github.com/swarmdotmarket/perigord/contract"
-	"github.com/swarmdotmarket/perigord/testing"
+	"github.com/polyswarm/perigord/contract"
+	"github.com/polyswarm/perigord/testing"
 
-	"github.com/swarmdotmarket/token_example/bindings"
+	"github.com/polyswarm/token_example/bindings"
 )
 
 type foo_test struct{}

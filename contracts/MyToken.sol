@@ -25,7 +25,7 @@ contract MyToken {
         string tokenName,
         uint8 decimalUnits,
         string tokenSymbol
-        ) {
+        ) public {
         balanceOf[msg.sender] = initialSupply;              // Give the creator all initial tokens
         totalSupply = initialSupply;                        // Update total supply
         name = tokenName;                                   // Set the name for display purposes
@@ -46,7 +46,7 @@ contract MyToken {
     /// @notice Send `_value` tokens to `_to` from your account
     /// @param _to The address of the recipient
     /// @param _value the amount to send
-    function transfer(address _to, uint256 _value) {
+    function transfer(address _to, uint256 _value) public {
         _transfer(msg.sender, _to, _value);
     }
 
@@ -54,7 +54,7 @@ contract MyToken {
     /// @param _from The address of the sender
     /// @param _to The address of the recipient
     /// @param _value the amount to send
-    function transferFrom(address _from, address _to, uint256 _value) returns (bool success) {
+    function transferFrom(address _from, address _to, uint256 _value) public returns (bool success) {
         require (_value < allowance[_from][msg.sender]);     // Check allowance
         allowance[_from][msg.sender] -= _value;
         _transfer(_from, _to, _value);
@@ -64,7 +64,7 @@ contract MyToken {
     /// @notice Allows `_spender` to spend no more than `_value` tokens in your behalf
     /// @param _spender The address authorized to spend
     /// @param _value the max amount they can spend
-    function approve(address _spender, uint256 _value)
+    function approve(address _spender, uint256 _value) public
         returns (bool success) {
         allowance[msg.sender][_spender] = _value;
         return true;
@@ -74,7 +74,7 @@ contract MyToken {
     /// @param _spender The address authorized to spend
     /// @param _value the max amount they can spend
     /// @param _extraData some extra information to send to the approved contract
-    function approveAndCall(address _spender, uint256 _value, bytes _extraData)
+    function approveAndCall(address _spender, uint256 _value, bytes _extraData) public
         returns (bool success) {
         tokenRecipient spender = tokenRecipient(_spender);
         if (approve(_spender, _value)) {
@@ -85,7 +85,7 @@ contract MyToken {
 
     /// @notice Remove `_value` tokens from the system irreversibly
     /// @param _value the amount of money to burn
-    function burn(uint256 _value) returns (bool success) {
+    function burn(uint256 _value) public returns (bool success) {
         require (balanceOf[msg.sender] > _value);            // Check if the sender has enough
         balanceOf[msg.sender] -= _value;                      // Subtract from the sender
         totalSupply -= _value;                                // Updates totalSupply
@@ -93,7 +93,7 @@ contract MyToken {
         return true;
     }
 
-    function burnFrom(address _from, uint256 _value) returns (bool success) {
+    function burnFrom(address _from, uint256 _value) public returns (bool success) {
         require(balanceOf[_from] >= _value);                // Check if the targeted balance is enough
         require(_value <= allowance[_from][msg.sender]);    // Check allowance
         balanceOf[_from] -= _value;                         // Subtract from the targeted balance

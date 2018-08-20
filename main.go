@@ -6,11 +6,11 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/swarmdotmarket/perigord/contract"
-	"github.com/swarmdotmarket/perigord/migration"
+	"github.com/polyswarm/perigord/contract"
+	"github.com/polyswarm/perigord/migration"
 
-	"github.com/swarmdotmarket/token_example/bindings"
-	_ "github.com/swarmdotmarket/token_example/migrations"
+	"github.com/polyswarm/token_example/bindings"
+	_ "github.com/polyswarm/token_example/migrations"
 )
 
 func main() {

@@ -3,8 +3,8 @@
 package main
 
 import (
-	_ "github.com/swarmdotmarket/token_example/migrations"
-	"github.com/swarmdotmarket/perigord/stub"
+	_ "github.com/polyswarm/token_example/migrations"
+	"github.com/polyswarm/perigord/stub"
 )
 
 func main() {
